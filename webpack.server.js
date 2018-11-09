@@ -4,7 +4,7 @@ module.exports = {
   // target: inform webpack that we're building a bundle for node.js, rather than for the browser.
   target: 'node',
   // entry: tell webpack the root file of our server application.
-  entry: './src/server.js',
+  entry: './server.js',
   // output: tell where to put the output file that is generated.
   output: {
     filename: 'bundle.js',
