@@ -1,9 +1,14 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 import App from '../src/app';
 
-export default () => {
-  const content = renderToString(<App />);
+const renderer = req => {
+  const content = renderToString(
+    <StaticRouter location={req.path} context={{}}>
+      <App />
+    </StaticRouter>
+  );
   return `
     <html>
       <head></head>
@@ -14,3 +19,5 @@ export default () => {
     </html>
   `;
 };
+
+export default renderer;
