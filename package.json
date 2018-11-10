@@ -4,7 +4,7 @@
   "description": "Server-Side Rendering Practice Project",
   "main": "index.js",
   "scripts": {
-    "build:server": "webpack --config webpack.server.js"
+    "build:server": "webpack --config webpack.server.js --watch"
   },
   "author": "Roderick Fung",
   "license": "ISC",
