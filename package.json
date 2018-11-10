@@ -1,10 +1,10 @@
 {
   "name": "react-ssr",
   "version": "1.0.0",
-  "description": "Server-Side rendering project",
+  "description": "Server-Side Rendering Practice Project",
   "main": "index.js",
   "scripts": {},
-  "author": "",
+  "author": "Roderick Fung",
   "license": "ISC",
   "dependencies": {
     "axios": "0.16.2",
