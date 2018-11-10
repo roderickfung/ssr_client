@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   // tell webpack to run babel on every file it runs through
   module: {
@@ -19,5 +21,13 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      helpers: path.resolve(__dirname, 'helpers/'),
+      lib: path.resolve(__dirname, 'lib/'),
+      src: path.resolve(__dirname, 'src/')
+    }
   }
 };
