@@ -4,7 +4,10 @@
   "description": "Server-Side Rendering Practice Project",
   "main": "index.js",
   "scripts": {
-    "build:server": "webpack --config webpack.server.js --watch"
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:init": "nodemon --watch build --exec \"node build/bundle.server.js\"",
+    "dev:server": "webpack --config webpack.server.js --watch",
+    "dev:client": "webpack --config webpack.client.js --watch"
   },
   "author": "Roderick Fung",
   "license": "ISC",
