@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Server-Side Rendering Practice Project",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build:server": "webpack --config webpack.server.js"
+  },
   "author": "Roderick Fung",
   "license": "ISC",
   "dependencies": {
