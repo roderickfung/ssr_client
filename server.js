@@ -1,16 +1,16 @@
 import 'babel-polyfill';
 import express from 'express';
-import renderer from './helpers/renderer';
-import serverStore from './helpers/store';
+import { matchRoutes } from 'react-router-config';
+import router from 'lib/routes';
+import renderer from 'helpers/renderer';
+import serverStore from 'helpers/store';
 
 const server = express();
-server.use(express.static('public'));
 
+server.use(express.static('public'));
 server.get('*', (req, res) => {
   const store = serverStore();
-
-  // logic to initialize and load data into the server store
-
+  matchRoutes(router, req.path);
   res.send(renderer(req, store));
 });
 
